@@ -1,0 +1,21 @@
+<h1>Grades</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <td></td>
+            <td>{{getCourses[0].courseName}}</td>
+            <td>{{getCourses[1].courseName}}</td>
+            <td>{{getCourses[2].courseName}}</td>
+            <td>Average</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="student in getStudents">
+            <td>{{student.name}}</td>
+            <td>{{student.grades[0].grade}}</td>
+            <td>{{student.grades[1].grade}}</td>
+            <td>{{student.grades[2].grade}}</td>
+            <td>{{student.grades| Average}}</td>
+        </tr>
+    </tbody>
+</table>
